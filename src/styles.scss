@@ -1,10 +1,11 @@
-@use '~@angular/material' as mat;
-@use './custom-palette' as custom;
+// styles.scss
+
+@use '@angular/material' as mat;
+@use './custom-palette';
 
 @include mat.core();
 
-// Use the custom palette for the theme
-@include mat.define-dark-theme(custom.$mat-custom-theme);
+@include mat.all-component-themes(custom-palette.$custom-theme);
 
 html,
 body {
