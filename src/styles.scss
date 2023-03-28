@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@use '~@angular/material' as mat;
+@import './assets/styles/scss/custom-palette';
+
+@include mat.core();
+
+// Use the custom palette for the theme
+@include mat.define-dark-theme($mat-custom-theme);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
