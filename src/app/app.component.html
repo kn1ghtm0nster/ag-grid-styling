@@ -3,12 +3,23 @@
   <section>
     <div class="example-label">Raised</div>
     <div class="example-button-row">
-      <button mat-raised-button>Basic</button>
       <button mat-raised-button color="primary">Primary</button>
       <button mat-raised-button color="accent">Accent</button>
       <button mat-raised-button color="warn">Warn</button>
-      <button mat-raised-button disabled>Disabled</button>
-      <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
     </div>
   </section>
 </div>
+<!-- Button to clear selection -->
+<button (click)="clearSelection()">Clear Selection</button>
+<!-- AG Grid Angular Component -->
+<ag-grid-angular
+   style="width: 100%; height: 100%"
+   class="ag-theme-alpine"
+   [columnDefs]="columnDefs"
+   [defaultColDef]="defaultColDef"
+   [rowData]="rowData$ | async"
+   [rowSelection]="'multiple'"
+   [animateRows]="true"
+   (gridReady)="onGridReady($event)"
+   (cellClicked)="onCellClicked($event)"
+ ></ag-grid-angular>

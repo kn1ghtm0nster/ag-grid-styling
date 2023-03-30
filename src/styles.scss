@@ -3,6 +3,9 @@
 @use '@angular/material' as mat;
 @use './custom-palette';
 
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
 @include mat.core();
 
 @include mat.all-component-themes(custom-palette.$custom-theme);
@@ -10,8 +13,11 @@
 html,
 body {
   height: 100%;
+  width: auto;
+  padding: 5px;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 body {
-  margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
